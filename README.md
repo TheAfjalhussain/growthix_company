@@ -1,73 +1,219 @@
-# Welcome to your Lovable project
+# Growthix
 
-## Project info
+A modern, responsive company website for Growthix built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌟 Features
 
-## How can I edit this code?
+- **Responsive Design** - Mobile-first approach with seamless experience across all devices
+- **Modern UI Components** - Built with Radix UI for accessible, unstyled component primitives
+- **Dark Mode Support** - Theme switching with next-themes
+- **Fast Performance** - Optimized with Vite for lightning-fast development and production builds
+- **SEO Optimized** - Clean routing and semantic HTML
+- **Form Validation** - Robust form handling with React Hook Form and Zod
+- **Smooth Animations** - Framer Motion for delightful user interactions
+- **Type-Safe** - Full TypeScript support for better development experience
+- **State Management** - React Query for efficient data fetching and caching
 
-There are several ways of editing your application.
+## 📋 Pages
 
-**Use Lovable**
+- **Home** - Landing page with company overview
+- **About** - Company information and mission
+- **Services** - Detailed service offerings
+- **Divisions** - Business divisions overview
+- **Technologies** - Tech stack and capabilities
+- **Projects** - Portfolio of past projects
+- **Contact** - Contact form and information
+- **Privacy Policy** - Privacy protection terms
+- **Terms of Service** - Legal terms and conditions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend Framework
+- **React** 18.3+ - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **React Router DOM** - Client-side routing
 
-**Use your preferred IDE**
+### UI & Styling
+- **Radix UI** - Accessible component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
+- **Next Themes** - Theme management
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Form & Validation
+- **React Hook Form** - Performant form handling
+- **Zod** - TypeScript-first schema validation
+- **@hookform/resolvers** - Form resolver for validation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Utilities
+- **TanStack React Query** - Data fetching and caching
+- **date-fns** - Date manipulation
+- **Class Variance Authority** - Component styling variants
+- **clsx** - Conditional className utility
+- **Tailwind Merge** - Merge Tailwind class names
 
-Follow these steps:
+### Development Tools
+- **ESLint** - Code quality and linting
+- **Playwright** - E2E testing (fixtures included)
+- **Vitest** - Unit testing
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Project Structure
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```
+src/
+├── components/        # Reusable React components
+│   └── ui/           # Radix UI based component library
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+├── pages/            # Page components
+│   ├── Index.tsx     # Home page
+│   ├── About.tsx     # About page
+│   ├── Services.tsx  # Services page
+│   ├── Divisions.tsx # Divisions page
+│   ├── Technologies.tsx # Technologies page
+│   ├── Projects.tsx  # Projects portfolio
+│   ├── Contact.tsx   # Contact page
+│   ├── Privacy.tsx   # Privacy policy
+│   ├── Terms.tsx     # Terms of service
+│   └── NotFound.tsx  # 404 page
+├── assets/           # Static assets (images, videos, etc.)
+├── App.tsx           # Main app component with routing
+├── App.css           # Global app styles
+├── main.tsx          # React DOM entry point
+├── index.css         # Global styles
+└── vite-env.d.ts     # Vite environment type definitions
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Getting Started
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd growthix
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bun install
+   # or
+   npm install
+   ```
+
+### Development Server
+
+Start the development server with hot module replacement (HMR):
+
+```bash
+bun dev
+# or
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Available Scripts
 
-**Use GitHub Codespaces**
+### Development
+```bash
+bun dev              # Start dev server with HMR
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Build
+```bash
+bun build            # Production build
+bun build:dev        # Development build
+```
 
-## What technologies are used for this project?
+### Preview
+```bash
+bun preview          # Preview production build locally
+```
 
-This project is built with:
+### Linting
+```bash
+bun lint             # Run ESLint
+bun lint --fix       # Fix linting errors automatically
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🏗️ Building for Production
 
-## How can I deploy this project?
+Create an optimized production build:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+bun build
+```
 
-## Can I connect a custom domain to my Lovable project?
+The build output will be in the `dist/` directory, ready for deployment.
 
-Yes, you can!
+### Preview Production Build
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To test the production build locally:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+bun preview
+```
+
+## 🧪 Testing
+
+### End-to-End Testing
+Playwright fixtures are configured. Run E2E tests using:
+
+```bash
+bun test:e2e         # If script is configured
+```
+
+### Unit Testing
+Vitest configuration is included. Run unit tests:
+
+```bash
+bun test             # If script is configured
+```
+
+## 🎨 Customization
+
+### Theme Configuration
+- Edit `tailwind.config.ts` for Tailwind theme customization
+- Modify `src/components/ThemeProvider.tsx` for theme switching logic
+
+### Color Scheme
+- Primary colors and theme variables are defined in the global CSS files
+- Use Tailwind's color palette or customize in the config
+
+### Typography
+- Configure fonts and text styles in `tailwind.config.ts`
+- Tailwind Typography plugin is installed for rich text styling
+
+## 🤝 Contributing
+
+1. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Commit changes (`git commit -m 'Add amazing feature'`)
+3. Push to branch (`git push origin feature/amazing-feature`)
+4. Open a Pull Request
+
+## 📄 License
+
+This project is a proprietary work of Growthix Company. All rights reserved.
+
+## 📞 Support
+
+For support, please contact:
+- **Email**: support@growthix.com
+- **Website**: https://growthix.com
+- **Contact Form**: Available on the website contact page
+
+## 🙏 Acknowledgments
+
+- [Radix UI](https://radix-ui.com/) - Accessible component library
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [React Router](https://reactrouter.com/) - Client-side routing
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+
+---
+
+**Last Updated**: April 2026  
+**Version**: 0.0.0  
+**Status**: In Development
