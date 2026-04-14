@@ -98,7 +98,7 @@ const Contact = () => {
       if (formData.phone) msg += `*Phone:* ${formData.phone}\n`;
       if (formData.company) msg += `*Company:* ${formData.company}\n`;
       msg += `\n*Message:*\n${formData.message}`;
-      const whatsappLink = `https://api.whatsapp.com/send?phone=919876543210&text=${encodeURIComponent(msg)}`;
+      const whatsappLink = `https://api.whatsapp.com/send?phone=7667845540&text=${encodeURIComponent(msg)}`;
       window.open(whatsappLink, "_blank", "noopener,noreferrer");
       toast({ title: "Redirecting to WhatsApp", description: "Your message is being sent via WhatsApp." });
       setFormData({ name: "", email: "", phone: "", company: "", message: "" });
